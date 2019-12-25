@@ -1,0 +1,21 @@
+[GENERAL]
+# Indicator in html of site_PATTERN.html which will be replaced by INCLUDE_1.txt:
+INCLUDE_1_INDICATOR = var start_point = ol.proj.fromLonLat([20.47689, 53.77383]); var zoom = 13;
+
+# Indicator in html of site_PATTERN.html which will be replaced by INCLUDE_2.txt:
+INCLUDE_2_INDICATOR = }	// init
+
+# Indicator in html of site_PATTERN.html which will be replaced by photo points:
+THE_PLACE_TO_PASTE_INDICATOR = //the place to paste photo location points
+
+
+[USER]
+# Path to a web browser (tested on Firefox):
+WEB_BROWSER_PATH = C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe
+
+# STOP_AT_THE_END = yes / no
+STOP_AT_THE_END = no
+
+# Pattern source (if a file in www folder - file name, if a site - url with 'http' or https' at the start):
+PATTERN_SOURCE = site_PATTERN.html
+

@@ -1,0 +1,19 @@
+GT_picture
+
+# Przeznaczenie:
+Skrypt Python 3.x, który pobiera dane ze zdjêæ ze znacznikami geograficznymi (w wybranym folderze) i pokazuje ich lokalizacjê na mapie (w przegl¹darce internetowej przy u¿yciu OpenStreetMap i OpenLayers).
+
+# Co dalej:
+Mo¿na klikn¹æ punkty i zobaczyæ za³¹czone zdjêcie.
+
+# Wymagania:
+Pliki zdjêæ z rozszerzeniem .jpg lub .jpeg.
+Ten skrypt wymaga modu³ów PyQT5 i exif.
+Przegl¹darka internetowa (testowany na Firefox).
+
+# Uruchomienie bezpoœrednio w systemie Windows (Windows 10 x64):
+Rozpakuj plik GT_picture.7z i uruchom plik GT_picture.exe.
+
+# Licencja:
+GNU General Public License, wersja 2.
+

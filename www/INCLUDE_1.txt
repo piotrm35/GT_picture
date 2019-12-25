@@ -1,0 +1,74 @@
+var normal_point_style = new ol.style.Style
+				({
+					image: new ol.style.Circle
+					({
+						radius: 5,
+						fill: new ol.style.Fill
+						({
+							color: '#0000FF'
+						})
+					})
+				});
+				
+				var selected_point_style = new ol.style.Style
+				({
+					image: new ol.style.Circle
+					({
+						radius: 7,
+						fill: new ol.style.Fill
+						({
+							color: '#FF0000'
+						})
+					})
+				});
+				
+				var used_point_style = new ol.style.Style
+				({
+					image: new ol.style.Circle
+					({
+						radius: 5,
+						fill: new ol.style.Fill
+						({
+							color: '#ff7f00'
+						})
+					})
+				});
+				
+				var point_feature_array = [];
+				
+				// INCLUDE BEGIN ---------------------------------------------------------------------
+				
+				//the place to paste photo location points
+				
+				// INCLUDE END -----------------------------------------------------------------------
+				// functions:
+				
+				function set_point_style()
+				{
+					for (var i = 0; i < point_feature_array.length; i++)
+					{
+						if (point_feature_array[i].get('used') == 'False')
+						{
+							point_feature_array[i].setStyle(normal_point_style);
+						}
+						else
+						{
+							point_feature_array[i].setStyle(used_point_style);
+						}
+					}
+				}
+				
+				function on_click(feature)
+				{
+					console.log(feature.get('file_name') + ' ' + feature.get('time_stamp'));
+					set_point_style();
+					feature.setStyle(selected_point_style);
+					feature.set('used', 'True')
+					var left = Math.floor(Math.random() * 100);
+					var top = Math.floor(Math.random() * 100);
+					var web_browser_window_features = 'menubar=no,location=yes,resizable=yes,scrollbars=yes,left=' + left + ',top=' + top + ',height=480,width=640';
+					var wnd = window.open(pictures_folder_path + feature.get('file_name'), feature.get('file_name'), web_browser_window_features);
+					wnd.focus();
+				}
+				
+				// -----------------------------------------------------------------------------------

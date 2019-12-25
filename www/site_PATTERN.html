@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8" />
+		<!--
+		author: Piotr Michałowski, Olsztyn, woj. W-M, Poland
+		piotrm35@hotmail.com
+		license: GPL v. 2.0
+		work start date: 15.09.2018
+		-->
+		<title>GT_picture v. 0.0.2</title>
+		<link rel="stylesheet" href="./OL/ol.css" type="text/css">
+		<script src="./OL/ol.js"></script>
+		<style>
+			html, body
+			{
+				height: 100%;
+				margin: 0;
+			}
+			#map
+			{
+				height: 100%;
+			}
+		</style>
+	</head>
+
+	<body onload="init()">
+		<div id="map"></div>
+		<script type="text/javascript">
+			function init()
+			{
+				var start_point = ol.proj.fromLonLat([20.47689, 53.77383]); var zoom = 13;
+				
+				var map = new ol.Map
+				({
+					target: 'map',
+					view: new ol.View
+					({
+						center: start_point,
+						rotation: 0,
+						zoom: zoom
+					})
+				});
+				
+				var osm_layer = new ol.layer.Tile({source: new ol.source.OSM()});
+				map.addLayer(osm_layer);
+				
+			}	// init
+		</script>
+	</body>
+</html>

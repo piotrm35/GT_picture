@@ -1,0 +1,20 @@
+				
+				// -----------------------------------------------------------------------------------
+				
+				map.on('click', function(evt) 
+				{
+					var feature = map.forEachFeatureAtPixel(evt.pixel, function(feature) 
+						{ 
+							return feature; 
+						});
+					if (feature) 
+					{
+						on_click(feature);
+					} 
+				});
+				
+				set_point_style();
+				var photos_layer = new ol.layer.Vector({source: new ol.source.Vector({features: point_feature_array})});
+				map.addLayer(photos_layer);
+			}	// init
+			
