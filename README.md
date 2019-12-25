@@ -11,8 +11,16 @@ Photo files with .jpg or .jpeg extension.
 This script requires PyQT5 and exif modules.
 A web browser (tested on Firefox).
 
-# How to run it directly on Windows (Windows 10 x64):
-Unpack the file GT_picture.7z and run GT_picture.exe.
+# How to run this script:
+- from https://sourceforge.net/projects/winpython/files/WinPython_3.7/3.7.4.1/ download a file Winpython64-3.7.4.1Ps2.exe (or another equivalent python ditribution)
+- unpack the folder
+- register WinPython: open WPy64-3741\WinPython Control Panel.exe -> Advanced -> Register distribution
+- install exif library: open WPy64-3741\WinPython Command Prompt.exe and type 'pip install exif' [Enter]
+- install PyQt5 library: open WPy64-3741\WinPython Command Prompt.exe and type 'pip install PyQt5' [Enter]
+- from https://openlayers.org/download/ download a file similar to v6.1.1-dist.zip
+- unpack the folder and change its name to 'OL'
+- move it to www folder
+- double click on GT_picture.py
 
 # License:
 GNU General Public License, version 2.
