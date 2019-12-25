@@ -14,9 +14,9 @@ Przegl¹darka internetowa (testowany na Firefox).
 # Jak uruchomiæ ten skrypt:
 - z https://sourceforge.net/projects/winpython/files/WinPython_3.7/3.7.4.1/ pobierz plik Winpython64-3.7.4.1Ps2.exe (lub inn¹ równowa¿n¹ dystrybucjê Pythona)
 - rozpakuj folder
-- zarejestruj WinPython: otwórz WPy64-3741 \ WinPython Control Panel.exe -> Advanced -> Register distribution
-- zainstaluj bibliotekê exif: otwórz WPy64-3741 \ WinPython Command Prompt.exe i wpisz „pip install exif” [Enter]
-- zainstaluj bibliotekê PyQt5: otwórz WPy64-3741 \ WinPython Command Prompt.exe i wpisz „pip install PyQt5” [Enter]
+- zarejestruj WinPython: otwórz WPy64-3741\WinPython Control Panel.exe -> Advanced -> Register distribution
+- zainstaluj bibliotekê exif: otwórz WPy64-3741\WinPython Command Prompt.exe i wpisz „pip install exif” [Enter]
+- zainstaluj bibliotekê PyQt5: otwórz WPy64-3741\WinPython Command Prompt.exe i wpisz „pip install PyQt5” [Enter]
 - z https://openlayers.org/download/ pobierz plik podobny do v6.1.1-dist.zip
 - rozpakuj folder i zmieñ jego nazwê na „OL”
 - przenieœ go do folderu www
