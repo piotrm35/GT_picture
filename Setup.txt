@@ -5,7 +5,7 @@ INCLUDE_1_INDICATOR = var start_point = ol.proj.fromLonLat([20.47689, 53.77383])
 # Indicator in html of site_PATTERN.html which will be replaced by INCLUDE_2.txt:
 INCLUDE_2_INDICATOR = }	// init
 
-# Indicator in html of site_PATTERN.html which will be replaced by photo points:
+# Indicator in html of site_PATTERN.html (INCLUDE_1.txt) which will be replaced by photo points:
 THE_PLACE_TO_PASTE_INDICATOR = //the place to paste photo location points
 
 

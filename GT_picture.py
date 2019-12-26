@@ -8,7 +8,7 @@
   This script requires PyQT5 and exif modules.
   Photo files with .jpg or .jpeg extension.
 
-  version: 0.0.2
+  version: 0.1.0
   
   --------------------------------------
   Date : 23.12.2019
@@ -62,31 +62,13 @@ class GT_picture(QWidget):
             sections = config.sections()
             for section in sections:
                 if section == 'GENERAL':
-                    try:
-                        self.INCLUDE_1_INDICATOR = self._get_string_from_config(config, section, 'INCLUDE_1_INDICATOR').strip()
-                    except:
-                        print('Setup PROBLEM: there is no INCLUDE_1_INDICATOR.')
-                    try:
-                        self.INCLUDE_2_INDICATOR = self._get_string_from_config(config, section, 'INCLUDE_2_INDICATOR').strip()
-                    except:
-                        print('Setup PROBLEM: there is no INCLUDE_2_INDICATOR.')
-                    try:
-                        self.THE_PLACE_TO_PASTE_INDICATOR = self._get_string_from_config(config, section, 'THE_PLACE_TO_PASTE_INDICATOR').strip()
-                    except:
-                        print('Setup PROBLEM: there is no THE_PLACE_TO_PASTE_INDICATOR.')
+                    self.INCLUDE_1_INDICATOR = self._get_string_from_config(config, section, 'INCLUDE_1_INDICATOR').strip()
+                    self.INCLUDE_2_INDICATOR = self._get_string_from_config(config, section, 'INCLUDE_2_INDICATOR').strip()
+                    self.THE_PLACE_TO_PASTE_INDICATOR = self._get_string_from_config(config, section, 'THE_PLACE_TO_PASTE_INDICATOR').strip()
                 elif section == 'USER':
-                    try:
-                        self.WEB_BROWSER_PATH = self._get_string_from_config(config, section, 'WEB_BROWSER_PATH').strip()
-                    except:
-                        print('Setup PROBLEM: there is no WEB_BROWSER_PATH.')
-                    try:
-                        self.STOP_AT_THE_END = self._get_string_from_config(config, section, 'STOP_AT_THE_END').strip() == 'yes'
-                    except:
-                        print('Setup PROBLEM: there is no STOP_AT_THE_END.')
-                    try:
-                        self.PATTERN_SOURCE = self._get_string_from_config(config, section, 'PATTERN_SOURCE').strip()
-                    except:
-                        print('Setup PROBLEM: there is no PATTERN_SOURCE.')
+                    self.WEB_BROWSER_PATH = self._get_string_from_config(config, section, 'WEB_BROWSER_PATH').strip()
+                    self.STOP_AT_THE_END = self._get_string_from_config(config, section, 'STOP_AT_THE_END').strip() == 'yes'
+                    self.PATTERN_SOURCE = self._get_string_from_config(config, section, 'PATTERN_SOURCE').strip()
         except Exception as e:
             print('configparser Exception: ' + str(e))
         if self.INCLUDE_1_INDICATOR and self.INCLUDE_2_INDICATOR and self.THE_PLACE_TO_PASTE_INDICATOR and self.WEB_BROWSER_PATH and self.PATTERN_SOURCE:
